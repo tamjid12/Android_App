@@ -43,22 +43,29 @@ public class MainActivity extends AppCompatActivity {
         log = "\nQ#" + " " + qNum + Question + "\n" + "Your Answer: " + playerAnswer
                 + "\n" + "Correct Answer: " + answer + "\n" + log + "\n";
         ((TextView) findViewById(R.id.log)).setText(log);
-        final int MAX_NUM_QUESTIONS = 9;
+
+        final int MAX_NUM_QUESTIONS = 10;
+
         if (qNum < MAX_NUM_QUESTIONS) {
 
             if (playerAnswer.equals(game.getAnswer().toUpperCase())) {
                 score++;
                 ((TextView) findViewById(R.id.score)).setText("Score = " + score);
+
             }
+            ((TextView) findViewById(R.id.answer)).setText("");
             ask();
         } else {
             if (playerAnswer.equals(game.getAnswer().toUpperCase())) {
                 score++;
                 ((TextView) findViewById(R.id.score)).setText("Score = " + score);
+
             }
+
             finish();
 
         }
+
 
     }
 
@@ -66,5 +73,6 @@ public class MainActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.qNum)).setText("Game Over!");
         ((Button) findViewById(R.id.done)).setOnClickListener(null);
         ((Button) findViewById(R.id.done)).setEnabled(false);
+        ((TextView) findViewById(R.id.answer)).setText("");
     }
 }
