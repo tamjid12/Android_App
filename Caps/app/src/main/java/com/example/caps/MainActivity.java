@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.question)).setText(question);
         qNum++;
-        String questionNumber = "Q#" + qNum;
+        String questionNumber = "Question#" + qNum;
         ((TextView) findViewById(R.id.qNum)).setText(questionNumber);
     }
 
-    public void glue(View v) {
+    public void next(View v) {
         String playerAnswer = ((EditText) findViewById(R.id.answer)).getText().toString().toUpperCase();
         answer = game.getAnswer();
         log = "\nQ#" + " " + qNum + Question + "\n" + "Your Answer: " + playerAnswer

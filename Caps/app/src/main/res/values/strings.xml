@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Caps</string>
+    <string name="app_name">Country Capital Game</string>
+    <string name="country_capital_game">Country Capital Game</string>
 </resources>
