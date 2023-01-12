@@ -1,2 +1,2 @@
-# Android_App
+# Country Capital game
 This is an Android app
